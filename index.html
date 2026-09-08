@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#1646eb">
+  <meta name="description" content="Down the Drain — een collectief voor muziek, hostings en events. Duik in onze badkuip op Solar Weekend en ontdek waar we hierna opduiken.">
+  <title>Down the Drain — Welcome to the deep end</title>
+  <link rel="icon" href="assets/images/web/drain-logo-round.png" type="image/png" sizes="192x192">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
+  <script src="js/intro.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Naar de inhoud</a>
+  <!-- Hidden by default: without JavaScript the site remains accessible. -->
+  <dialog class="drain-intro" id="drainIntro" aria-labelledby="introTitle">
+    <p class="intro-kicker" id="introTitle">YOU KNOW WHERE THIS IS GOING.</p>
+    <button class="drain-logo-button" id="drainLogoButton" aria-label="Ga naar de homepage van Down the Drain" autofocus>
+      <img class="drain-logo-spinner" src="assets/images/web/drain-logo-round-large.png" alt="Down the Drain" width="768" height="768">
+    </button>
+    <div class="intro-bottom"><p>CLICK TO GO DOWN <span aria-hidden="true">↓</span></p><button class="text-button" id="skipIntro">Intro overslaan ↗</button></div>
+  </dialog>
+
+  <header class="site-header">
+    <a class="nav-logo" href="#top" aria-label="Down the Drain — naar boven">
+      <img src="assets/images/web/drain-logo-round.png" alt="Down the Drain" width="64" height="64">
+    </a>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="mainNav" hidden>MENU <span aria-hidden="true">＋</span></button>
+    <nav class="main-nav" id="mainNav" aria-label="Hoofdnavigatie">
+      <a href="#events">Next up</a><a href="#about">Down the what?</a><a href="#solar">Solar '26</a><a href="#gallery">Galerij</a><a href="#contact">Contact ↗</a>
+    </nav>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <!-- AFTERMOVIE: replace this picture with the video snippet in README.md. -->
+    <section class="hero" id="top" aria-labelledby="heroTitle">
+      <picture class="hero-media">
+        <img src="assets/images/web/solar-crowd-hero-3840.jpg" srcset="assets/images/web/solar-crowd-hero-1600.jpg 1600w, assets/images/web/solar-crowd-hero-2560.jpg 2560w, assets/images/web/solar-crowd-hero-3840.jpg 3840w" sizes="max(100vw, 150svh)" width="3840" height="2560" alt="Van achter de dj-booth: een volle dansvloer onder de blauwe douche op Solar Weekend" fetchpriority="high">
+      </picture>
+      <div class="hero-shade" aria-hidden="true"></div>
+      <div class="hero-topline"><span>DOWN THE DRAIN / SOLAR WEEKEND 2026</span><span>ROERMOND, NL ↘</span></div>
+      <div class="hero-content">
+        <p class="eyebrow">Music. Friends. All going down.</p>
+        <h1 id="heroTitle" tabindex="-1">WELCOME TO<br>THE <span class="outline">DEEP END.</span></h1>
+        <div class="hero-bottom"><p>Duik erin. Blijf hangen.<br>De beste ideeën lopen uit de hand.</p><a class="button button-white" href="#events">WHERE NEXT? <span aria-hidden="true">↗</span></a></div>
+      </div>
+      <div class="hero-footnote"><span>SOLAR '26 — AFTERMOVIE BINNENKORT</span><a href="#events">SCROLL TO GO DEEPER ↓</a></div>
+    </section>
+
+    <section class="events section" id="events" aria-labelledby="eventsTitle">
+      <div class="section-label"><span>01 / NEXT UP</span><span class="status"><i aria-hidden="true"></i> TO BE CONTINUED</span></div>
+      <div class="event-row">
+        <h2 id="eventsTitle">THE NEXT<br>DIVE.</h2>
+        <div class="event-copy"><p class="eyebrow">NIEUW EVENT · BINNENKORT MEER</p><p>De volgende duik laat nog even op zich wachten. Datum, locatie en tickets vind je hier zodra ze bekend zijn.</p></div>
+        <a class="circle-link" href="#gallery" aria-label="Bekijk ondertussen de foto's van Solar">↘</a>
+      </div>
+    </section>
+
+    <section class="about section tile-surface" id="about" aria-labelledby="aboutTitle">
+      <div class="section-label"><span>02 / DOWN THE WHAT?</span><span>NO DIVING RULES.</span></div>
+      <div class="about-grid">
+        <h2 id="aboutTitle">GO DOWN.<br><span class="blue">FEEL ALIVE.</span></h2>
+        <div class="about-copy"><p class="large-copy">Een collectief voor muziek, hostings en events. Met vrienden voor de booth en chaos erachter.</p><p>Down the Drain is die plek waar je per ongeluk belandt en zes uur later nog steeds staat. We bouwen een wereld om de muziek heen. Op Solar werd dat een badkuip. Wat volgt? Dat zie je vanzelf.</p><span class="stamp">GOOD MUSIC. QUESTIONABLE IDEAS.</span></div>
+      </div>
+    </section>
+
+    <section class="solar section" id="solar" aria-labelledby="solarTitle">
+      <div class="section-label"><span>03 / SOLAR WEEKEND 2026</span><span>ROERMOND / THE BATHROOM TAKEOVER</span></div>
+      <div class="section-heading"><h2 id="solarTitle">ONE BIG<br><span class="blue">BATHROOM.</span></h2><p>Een badkuip als dj-booth. Een douche boven de dansvloer. En niemand die op tijd naar huis ging.</p></div>
+      <div class="solar-layout">
+        <figure class="solar-wide"><img src="assets/images/web/solar-bathtub-booth-1600.jpg" srcset="assets/images/web/solar-bathtub-booth-800.jpg 800w, assets/images/web/solar-bathtub-booth-1600.jpg 1600w" sizes="(max-width: 700px) 100vw, 65vw" width="1600" height="1067" loading="lazy" decoding="async" alt="Dj’s achter de blauwe, betegelde badkuipbooth op Solar"><figcaption><span>01 / IN THE TUB</span><span>VAN BADKAMER NAAR DANSVLOER ↗</span></figcaption></figure>
+        <figure class="solar-detail"><img src="assets/images/web/solar-bathhouse-800.jpg" width="533" height="800" loading="lazy" decoding="async" alt="De witte Down the Drain-stage met blauwe vloer en badkamerdecor"><figcaption>02 / THE SETTING</figcaption><p>GEEN BAD.<br>WEL EEN<br>WARM WELKOM.</p></figure>
+      </div>
+    </section>
+
+    <div class="divider-band" aria-hidden="true">MAKE WAVES. <span>GO DOWN.</span> MAKE WAVES. <span>GO DOWN.</span></div>
+
+    <section class="gallery section" id="gallery" aria-labelledby="galleryTitle">
+      <div class="section-label"><span>04 / CAMERA ROLL</span><span>8 MOMENTEN UIT DE CHAOS</span></div>
+      <div class="section-heading"><h2 id="galleryTitle">WISH YOU<br>WERE <span class="blue">WET.</span></h2><p>Van de eerste bubbels tot de laatste plaat. Een kleine selectie van een groot weekend.</p></div>
+      <div class="gallery-grid">
+        <a class="gallery-item landscape" href="assets/images/web/solar-blue-shower-1600.jpg" data-caption="01 / De douche boven de dansvloer"><img src="assets/images/web/solar-blue-shower-800.jpg" width="533" height="800" loading="lazy" decoding="async" alt="De grote blauwe waterdruppel onder de douchekop boven het publiek"><span>01 / LET IT FLOW <b aria-hidden="true">↗</b></span></a>
+        <a class="gallery-item" href="assets/images/web/solar-bubbles-1600.jpg" data-caption="02 / Bubbels op de dansvloer"><img src="assets/images/web/solar-bubbles-800.jpg" width="800" height="533" loading="lazy" decoding="async" alt="Festivalbezoekers dansen tussen de zeepbellen"><span>02 / BUBBLE TROUBLE <b aria-hidden="true">↗</b></span></a>
+        <a class="gallery-item" href="assets/images/web/solar-behind-the-decks-1600.jpg" data-caption="03 / Achter de decks"><img src="assets/images/web/solar-behind-the-decks-800.jpg" width="800" height="533" loading="lazy" decoding="async" alt="Dj’s achter de draaitafels bij het ronde Down the Drain-logo"><span>03 / IN GOOD HANDS <b aria-hidden="true">↗</b></span></a>
+        <a class="gallery-item" href="assets/images/web/solar-friends-1600.jpg" data-caption="04 / Vrienden voor de booth"><img src="assets/images/web/solar-friends-800.jpg" width="800" height="533" loading="lazy" decoding="async" alt="Drie vrienden poseren samen op de dansvloer"><span>04 / THE USUAL SUSPECTS <b aria-hidden="true">↗</b></span></a>
+        <a class="gallery-item" href="assets/images/web/solar-rubber-duck-1600.jpg" data-caption="05 / Een badeend op festivalformaat"><img src="assets/images/web/solar-rubber-duck-800.jpg" width="640" height="800" loading="lazy" decoding="async" alt="Een enorme gele badeend onder de blauwe lucht"><span>05 / BATH ESSENTIALS <b aria-hidden="true">↗</b></span></a>
+        <a class="gallery-item landscape" href="assets/images/web/solar-after-dark-1600.jpg" data-caption="06 / Nog lang niet klaar"><img src="assets/images/web/solar-after-dark-800.jpg" width="800" height="533" loading="lazy" decoding="async" alt="De volle dansvloer in de avond met de blauwe douche op de achtergrond"><span>06 / ONE MORE TRACK <b aria-hidden="true">↗</b></span></a>
+        <a class="gallery-item landscape" href="assets/images/web/solar-night-lights-1600.jpg" data-caption="07 / De badkamer na zonsondergang"><img src="assets/images/web/solar-night-lights-800.jpg" width="800" height="533" loading="lazy" decoding="async" alt="Blauw en paars licht over het feestende publiek in de nacht"><span>07 / AFTER HOURS <b aria-hidden="true">↗</b></span></a>
+        <a class="gallery-item landscape" href="assets/images/web/solar-soap-bubbles-1600.jpg" data-caption="08 / Kleine bubbels, groot weekend"><img src="assets/images/web/solar-soap-bubbles-800.jpg" width="640" height="800" loading="lazy" decoding="async" alt="Zeepbellen zweven tussen de festivalbezoekers"><span>08 / FLOATING HOME <b aria-hidden="true">↗</b></span></a>
+      </div>
+      <p class="gallery-note">Een weekend. Heel veel goede herinneringen. <a href="#top">Nog een keer naar boven ↑</a></p>
+    </section>
+
+    <section class="contact section tile-surface" id="contact" aria-labelledby="contactTitle">
+      <div class="section-label"><span>05 / MAKE SOMETHING HAPPEN</span><span>HOSTINGS / BOOKINGS / COLLABS</span></div>
+      <h2 id="contactTitle">LET’S GO<br><span class="blue">DOWN</span> TOGETHER<span class="blue">↘</span></h2>
+      <div class="contact-bottom"><p>Een hosting, een samenwerking of een veel te goed idee?<br>Daar maken we graag ruimte voor.</p><p class="contact-pending">Contactgegevens volgen binnenkort.</p></div>
+    </section>
+  </main>
+  <footer class="site-footer"><a class="wordmark" href="#top">DOWN THE DRAIN ↘</a><span>© <span id="year">2026</span> DOWN THE DRAIN</span><span>ALL GOING DOWN THE DRAIN.</span></footer>
+
+  <dialog class="lightbox" id="lightbox" aria-label="Fotogalerij">
+    <div class="lightbox-toolbar"><p id="photoCount" aria-live="polite"></p><button class="text-button" id="closeLightbox" autofocus>SLUITEN ×</button></div>
+    <figure><img id="lightboxImage" alt=""><figcaption id="lightboxCaption"></figcaption></figure>
+    <div class="lightbox-controls"><button id="previousPhoto" aria-label="Vorige foto">←</button><span>DOWN THE DRAIN / SOLAR '26</span><button id="nextPhoto" aria-label="Volgende foto">→</button></div>
+  </dialog>
+</body>
+</html>

@@ -1,0 +1,5 @@
+Navbar asset: drain-logo-transparent.png
+Created with the built-in image generation tool from drain-logo.jpg; exported at 192x192 with alpha for the 64px navbar. The intro retains its original image.
+
+Final prompt:
+Background removal asset edit. Output MUST be RGBA PNG with an actual transparent alpha channel (alpha=0 outside logo and in negative spaces). NOT a picture of checkerboard! Last attempt was RGB with painted checkerboard so unusable. Extract this exact existing blue purple chrome Down the Drain spiral logo from its black backdrop, preserve the exact letter geometry and colors. No new lettering or redrawing. All background pixels must have zero alpha, no checkerboard, no solid fill, no floor, no shadow. Square canvas modest padding for rotating navbar logo.

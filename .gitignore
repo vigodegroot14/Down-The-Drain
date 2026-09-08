@@ -1,0 +1,7 @@
+.local-preview/
+node_modules/
+assets/images/Down The drain*.jpg
+assets/video/*.mp4
+assets/video/*.webm
+Thumbs.db
+.DS_Store
