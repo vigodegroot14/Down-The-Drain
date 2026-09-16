@@ -19,7 +19,7 @@ $selection = @(
 )
 $codec = [System.Drawing.Imaging.ImageCodecInfo]::GetImageEncoders() | Where-Object MimeType -eq 'image/jpeg'
 $quality = New-Object System.Drawing.Imaging.EncoderParameters(1)
-$quality.Param[0] = New-Object System.Drawing.Imaging.EncoderParameter([System.Drawing.Imaging.Encoder]::Quality, [long]82)
+$quality.Param[0] = New-Object System.Drawing.Imaging.EncoderParameter([System.Drawing.Imaging.Encoder]::Quality, [long]92)
 $manifest = @()
 foreach ($photo in $selection) {
   $source = "Down The drain 2k26-$($photo.Number).jpg"
@@ -30,8 +30,9 @@ foreach ($photo in $selection) {
     $rotation = @{ 2=4; 3=2; 4=6; 5=5; 6=1; 7=7; 8=3 }
     if ($rotation.ContainsKey([int]$orientation)) { $original.RotateFlip($rotation[[int]$orientation]) }
   }
-  $sizes = @(800, 1600)
-  $jpegQuality = 82
+  # Include a 2400px source so large and HiDPI displays never have to upscale.
+  $sizes = @(800, 1600, 2400)
+  $jpegQuality = 92
   if ($photo.Name -eq 'solar-crowd-hero') {
     $sizes = @(800, 1600, 2560, 3840)
     $jpegQuality = 94

@@ -43,7 +43,7 @@ De originele foto's in `assets/images/` blijven intact. De site gebruikt alleen 
 | Nacht en licht | 108 | solar-night-lights |
 | Zeepbellen | 155 | solar-soap-bubbles |
 
-Galerijfoto's zijn maximaal 800 of 1600 pixels aan de langste zijde. De foto op het hoofdscherm heeft daarnaast versies van 2560 en 3840 pixels, met JPEG-kwaliteit 94 voor meer detail. De browser kiest via `srcset` een passende versie; `sizes` houdt rekening met de beeldvullende uitsnede en de schermhoogte. De bestanden behouden de camerastand en bevatten geen oorspronkelijke metadata. Foto's onder het hoofdscherm laden met `loading="lazy"`.
+Galerijfoto's zijn beschikbaar op 800, 1600 en 2400 pixels aan de langste zijde en worden met JPEG-kwaliteit 92 geëxporteerd. De foto op het hoofdscherm heeft daarnaast versies van 2560 en 3840 pixels, met JPEG-kwaliteit 94 voor meer detail. De browser kiest via `srcset` en `sizes` de juiste scherpe versie voor het formaat en de pixeldichtheid van het scherm. De bestanden behouden de camerastand en bevatten geen oorspronkelijke metadata. Foto's onder het hoofdscherm laden met `loading="lazy"`.
 
 ## Aftermovie toevoegen
 

@@ -36,6 +36,12 @@
         "height":  1600
     },
     {
+        "file":  "solar-bathhouse-2400.jpg",
+        "source":  "Down The drain 2k26-4.jpg",
+        "width":  1600,
+        "height":  2400
+    },
+    {
         "file":  "solar-bathtub-booth-800.jpg",
         "source":  "Down The drain 2k26-122.jpg",
         "width":  800,
@@ -46,6 +52,12 @@
         "source":  "Down The drain 2k26-122.jpg",
         "width":  1600,
         "height":  1067
+    },
+    {
+        "file":  "solar-bathtub-booth-2400.jpg",
+        "source":  "Down The drain 2k26-122.jpg",
+        "width":  2400,
+        "height":  1600
     },
     {
         "file":  "solar-blue-shower-800.jpg",
@@ -60,6 +72,12 @@
         "height":  1600
     },
     {
+        "file":  "solar-blue-shower-2400.jpg",
+        "source":  "Down The drain 2k26-23.jpg",
+        "width":  1600,
+        "height":  2400
+    },
+    {
         "file":  "solar-bubbles-800.jpg",
         "source":  "Down The drain 2k26-17.jpg",
         "width":  800,
@@ -70,6 +88,12 @@
         "source":  "Down The drain 2k26-17.jpg",
         "width":  1600,
         "height":  1067
+    },
+    {
+        "file":  "solar-bubbles-2400.jpg",
+        "source":  "Down The drain 2k26-17.jpg",
+        "width":  2400,
+        "height":  1600
     },
     {
         "file":  "solar-behind-the-decks-800.jpg",
@@ -84,6 +108,12 @@
         "height":  1067
     },
     {
+        "file":  "solar-behind-the-decks-2400.jpg",
+        "source":  "Down The drain 2k26-41.jpg",
+        "width":  2400,
+        "height":  1600
+    },
+    {
         "file":  "solar-friends-800.jpg",
         "source":  "Down The drain 2k26-60.jpg",
         "width":  800,
@@ -94,6 +124,12 @@
         "source":  "Down The drain 2k26-60.jpg",
         "width":  1600,
         "height":  1067
+    },
+    {
+        "file":  "solar-friends-2400.jpg",
+        "source":  "Down The drain 2k26-60.jpg",
+        "width":  2400,
+        "height":  1600
     },
     {
         "file":  "solar-rubber-duck-800.jpg",
@@ -108,6 +144,12 @@
         "height":  1600
     },
     {
+        "file":  "solar-rubber-duck-2400.jpg",
+        "source":  "Down The drain 2k26-73.jpg",
+        "width":  1920,
+        "height":  2400
+    },
+    {
         "file":  "solar-after-dark-800.jpg",
         "source":  "Down The drain 2k26-100.jpg",
         "width":  800,
@@ -118,6 +160,12 @@
         "source":  "Down The drain 2k26-100.jpg",
         "width":  1600,
         "height":  1067
+    },
+    {
+        "file":  "solar-after-dark-2400.jpg",
+        "source":  "Down The drain 2k26-100.jpg",
+        "width":  2400,
+        "height":  1600
     },
     {
         "file":  "solar-night-lights-800.jpg",
@@ -132,6 +180,12 @@
         "height":  1067
     },
     {
+        "file":  "solar-night-lights-2400.jpg",
+        "source":  "Down The drain 2k26-108.jpg",
+        "width":  2400,
+        "height":  1600
+    },
+    {
         "file":  "solar-soap-bubbles-800.jpg",
         "source":  "Down The drain 2k26-155.jpg",
         "width":  640,
@@ -142,5 +196,11 @@
         "source":  "Down The drain 2k26-155.jpg",
         "width":  1280,
         "height":  1600
+    },
+    {
+        "file":  "solar-soap-bubbles-2400.jpg",
+        "source":  "Down The drain 2k26-155.jpg",
+        "width":  1920,
+        "height":  2400
     }
 ]
