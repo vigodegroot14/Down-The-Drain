@@ -1,6 +1,6 @@
-Navbar asset: drain-logo-round.png
-Edited using the built-in image generation tool, then resized and centered for the 64px rotating navbar. Actual transparent alpha verified. Previous asset retained as drain-logo-transparent.png.
+Logo assets: drain-logo-round.png (navbar) and drain-logo-round-large.png (intro)
+Recolored using the built-in image generation tool, then resized for their website placements. Actual transparent alpha verified.
 
-Shape prompt: Deform the spiral letters to make the overall logo round rather than oval, using a circular outer envelope centered at the square canvas center. Make vertical and horizontal extent identical and radially balance the outer letter tips. Preserve DOWN THE DRAIN, chrome blue/purple and white highlights. No additional circle outline or backing disk.
+Color edit: Recolor only the purple/magenta portions of the existing DOWN THE DRAIN spiral logo to the website palette: vivid royal blue #1646EB and deep ink navy #10225B, retaining the white and pale-blue chrome highlights. Preserve the circular lettering, glossy finish and transparent negative space. No purple, violet or magenta hues; no background disk, outline circle, shadow or added elements.
 
 Final extraction prompt: Background removal asset edit. Output MUST be RGBA PNG with an actual transparent alpha channel (alpha=0 outside logo and in negative spaces). NOT a picture of checkerboard! Last attempt was RGB so unusable. Extract this exact existing blue purple chrome Down the Drain spiral logo from its black backdrop, preserve the exact round letter geometry and colors. No new lettering or redrawing. All background pixels must have zero alpha, no checkerboard, no solid fill, no floor, no shadow. Square canvas modest padding for rotating navbar logo.

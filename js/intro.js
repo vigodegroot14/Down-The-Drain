@@ -14,6 +14,7 @@
   let last = performance.now();
   let started = null;
   let fallback;
+  const accelerationDuration = 2200;
   function finish() {
     cancelAnimationFrame(frame);
     clearTimeout(fallback);
@@ -25,7 +26,7 @@
   }
   function animate(now) {
     if (!intro.open || reducedMotion.matches) return;
-    const progress = started === null ? 0 : Math.min((now - started) / 1050, 1);
+    const progress = started === null ? 0 : Math.min((now - started) / accelerationDuration, 1);
     angle += Math.min((now - last) / 1000, .05) * (22 + 850 * progress * progress);
     last = now;
     spinner.style.transform = `rotate(${angle}deg) scale(${1 + 9 * progress ** 3})`;
@@ -38,7 +39,7 @@
     if (started !== null) return;
     started = performance.now();
     // Still finish if a background tab or low-power browser suspends frames.
-    fallback = setTimeout(finish, 1400);
+    fallback = setTimeout(finish, accelerationDuration + 500);
   }
   button.addEventListener('click', enter);
   document.getElementById('skipIntro').addEventListener('click', finish);
