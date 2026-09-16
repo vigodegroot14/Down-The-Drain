@@ -1,41 +1,23 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 320">
-  <defs>
-    <linearGradient id="red-handle" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0" stop-color="#7f173e"/>
-      <stop offset=".55" stop-color="#b72855"/>
-      <stop offset="1" stop-color="#761536"/>
-    </linearGradient>
-    <linearGradient id="blue-handle" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0" stop-color="#10225b"/>
-      <stop offset=".55" stop-color="#1646eb"/>
-      <stop offset="1" stop-color="#10225b"/>
-    </linearGradient>
-  </defs>
-  <!-- Smaller blue festival toothbrush behind the main red one. -->
-  <g transform="translate(178 26) rotate(7 75 150)" stroke="#10225b" stroke-width="6" stroke-linejoin="round">
-    <path fill="url(#blue-handle)" d="M54 82h42l11 206c1 14-10 25-24 25H67c-14 0-25-11-24-25L54 82Z"/>
-    <ellipse cx="75" cy="57" rx="53" ry="48" fill="#1646eb"/>
-    <ellipse cx="75" cy="57" rx="41" ry="36" fill="#f6f8ff"/>
+  <!-- Two simplified versions of the upright Solar toothbrush props. -->
+  <g transform="translate(184 29) rotate(7 72 145)" stroke="#10225b" stroke-width="5" stroke-linejoin="round">
+    <path fill="#1646eb" d="M55 82h34l10 206c1 14-9 24-22 24H67c-13 0-23-10-22-24L55 82Z"/>
+    <ellipse cx="72" cy="58" rx="49" ry="45" fill="#1646eb"/>
+    <ellipse cx="72" cy="58" rx="37" ry="33" fill="#f6f8ff"/>
     <g fill="#1646eb" stroke="none">
-      <circle cx="55" cy="42" r="6"/><circle cx="75" cy="40" r="6"/><circle cx="95" cy="42" r="6"/>
-      <circle cx="51" cy="58" r="6"/><circle cx="75" cy="57" r="6"/><circle cx="99" cy="58" r="6"/>
-      <circle cx="56" cy="74" r="6"/><circle cx="75" cy="73" r="6"/><circle cx="94" cy="74" r="6"/>
+      <rect x="50" y="37" width="8" height="14" rx="4"/><rect x="68" y="35" width="8" height="14" rx="4"/><rect x="86" y="37" width="8" height="14" rx="4"/>
+      <rect x="50" y="55" width="8" height="14" rx="4"/><rect x="68" y="53" width="8" height="14" rx="4"/><rect x="86" y="55" width="8" height="14" rx="4"/>
+      <rect x="50" y="73" width="8" height="14" rx="4"/><rect x="68" y="71" width="8" height="14" rx="4"/><rect x="86" y="73" width="8" height="14" rx="4"/>
     </g>
-    <rect x="56" y="154" width="38" height="93" rx="8" fill="#f6f8ff"/>
-    <path d="M75 169v62" stroke="#1646eb" stroke-width="7" stroke-linecap="round"/>
   </g>
-  <!-- Broad red paddle-shaped toothbrush copied from the Solar decor. -->
-  <g transform="translate(24 3) rotate(-6 95 160)" stroke="#10225b" stroke-width="7" stroke-linejoin="round">
-    <path fill="url(#red-handle)" d="M68 89h54l14 201c1 16-11 28-27 28H81c-16 0-28-12-27-28L68 89Z"/>
-    <ellipse cx="95" cy="62" rx="66" ry="58" fill="#a7224f"/>
-    <ellipse cx="95" cy="62" rx="51" ry="44" fill="#f6f8ff"/>
-    <!-- Front-facing rows of chunky festival bristles. -->
+  <g transform="translate(35 5) rotate(-6 91 155)" stroke="#10225b" stroke-width="5" stroke-linejoin="round">
+    <path fill="#c82d4f" d="M67 91h48l13 197c1 16-11 28-26 28H80c-15 0-27-12-26-28L67 91Z"/>
+    <ellipse cx="91" cy="62" rx="61" ry="55" fill="#c82d4f"/>
+    <ellipse cx="91" cy="62" rx="47" ry="41" fill="#f6f8ff"/>
     <g fill="#f04438" stroke="none">
-      <ellipse cx="67" cy="43" rx="7" ry="10"/><ellipse cx="86" cy="39" rx="7" ry="10"/><ellipse cx="106" cy="39" rx="7" ry="10"/><ellipse cx="125" cy="43" rx="7" ry="10"/>
-      <ellipse cx="62" cy="61" rx="7" ry="10"/><ellipse cx="83" cy="58" rx="7" ry="10"/><ellipse cx="107" cy="58" rx="7" ry="10"/><ellipse cx="128" cy="61" rx="7" ry="10"/>
-      <ellipse cx="68" cy="79" rx="7" ry="10"/><ellipse cx="87" cy="77" rx="7" ry="10"/><ellipse cx="105" cy="77" rx="7" ry="10"/><ellipse cx="123" cy="79" rx="7" ry="10"/>
+      <rect x="60" y="35" width="10" height="17" rx="5"/><rect x="82" y="32" width="10" height="17" rx="5"/><rect x="104" y="35" width="10" height="17" rx="5"/>
+      <rect x="57" y="56" width="10" height="17" rx="5"/><rect x="82" y="54" width="10" height="17" rx="5"/><rect x="107" y="56" width="10" height="17" rx="5"/>
+      <rect x="60" y="77" width="10" height="17" rx="5"/><rect x="82" y="75" width="10" height="17" rx="5"/><rect x="104" y="77" width="10" height="17" rx="5"/>
     </g>
-    <rect x="72" y="160" width="46" height="103" rx="9" fill="#f6f8ff"/>
-    <path d="M95 177v69" stroke="#10225b" stroke-width="8" stroke-linecap="round"/>
   </g>
 </svg>
