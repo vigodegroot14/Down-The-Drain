@@ -39,7 +39,7 @@ h2 { font: 400 clamp(48px, 7.3vw, 110px)/.84 var(--font-display); letter-spacing
 
 /* Header. Mobile navigation remains usable without JavaScript. */
 .site-header { position: sticky; top: 0; z-index: 20; display: flex; align-items: center; justify-content: space-between; gap: 25px; padding: 7px var(--gutter); background: var(--paper); color: var(--blue); border-bottom: 1px solid var(--line); }
-.nav-logo { display: block; width: 54px; height: 54px; flex-shrink: 0; border-radius: 50%; }
+.nav-logo { display: block; width: 46px; height: 46px; flex-shrink: 0; border-radius: 50%; }
 .nav-logo img { width: 100%; height: 100%; border-radius: 50%; animation: nav-logo-spin 20s linear infinite; }
 .nav-logo:hover img, .nav-logo:focus-visible img { animation-play-state: paused; }
 @keyframes nav-logo-spin { to { transform: rotate(360deg); } }
@@ -82,17 +82,23 @@ h1 { font: 400 clamp(56px, 8.9vw, 150px)/.86 var(--font-display); letter-spacing
 .events { background: var(--blue); color: white; }
 .status { display: flex; align-items: center; gap: 9px; }
 .status i { width: 7px; height: 7px; border-radius: 50%; background: #c6e2ff; flex-shrink: 0; }
-.event-row { display: grid; grid-template-columns: 1.1fr 1fr auto; gap: 45px; align-items: end; }
+.event-row { display: grid; grid-template-columns: 1.1fr 1fr minmax(100px, 150px) auto; gap: clamp(22px, 3vw, 45px); align-items: end; }
 .event-row h2 { font-size: clamp(52px, 7vw, 100px); }
 .event-copy { max-width: 420px; }
 .event-copy .eyebrow { margin-bottom: 20px; }
 .event-copy > p:last-child { font-size: 17px; line-height: 1.7; }
+.bathroom-prop { display: block; height: auto; }
+.bath-duck { width: clamp(100px, 11vw, 150px); transform: rotate(-5deg); transform-origin: bottom center; transition: transform .25s ease; }
+.bath-duck:hover { transform: rotate(2deg) translateY(-5px); }
 .circle-link { display: grid; place-items: center; width: 84px; aspect-ratio: 1; border: 1px solid #ffffff80; border-radius: 50%; font-size: 44px; transition: background .2s; }
 .circle-link:hover { background: #ffffff25; }
 
 /* Story and Solar feature. */
 .about { padding-block: 85px 100px; }
 .about-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 7vw; }
+.about-title-wrap { display: flex; flex-direction: column; align-items: flex-start; gap: 34px; }
+.toothbrushes { width: clamp(150px, 18vw, 250px); margin-left: clamp(10px, 7vw, 110px); transform: rotate(-3deg); transition: transform .25s ease; }
+.toothbrushes:hover { transform: rotate(2deg) translateY(-5px); }
 .about-copy { padding: 12px; background: #fffffff0; }
 .about-copy > p { font-size: 16px; line-height: 1.8; }
 .about-copy .large-copy { font-size: clamp(21px, 2vw, 30px); line-height: 1.45; margin-bottom: 24px; }
@@ -138,6 +144,7 @@ figcaption { display: flex; justify-content: space-between; gap: 16px; margin-to
   .nav-enhanced .main-nav { display: none; flex-basis: 100%; flex-direction: column; padding-block: 15px; max-height: 65svh; overflow-y: auto; }
   .nav-enhanced.menu-open .main-nav { display: flex; }
   .event-row { grid-template-columns: 1fr 1fr; gap: 28px; }
+  .bath-duck { grid-column: 2; justify-self: end; width: 115px; }
   .circle-link { display: none; }
   .about-grid { gap: 35px; }
   .gallery-item img { height: 230px; }
@@ -158,6 +165,9 @@ figcaption { display: flex; justify-content: space-between; gap: 16px; margin-to
   .hero .eyebrow { font-size: 9px; letter-spacing: .08em; }
   .hero-footnote { flex-wrap: wrap; gap: 12px; font-size: 8px; }
   .event-row, .about-grid, .solar-layout { grid-template-columns: 1fr; }
+  .bath-duck { grid-column: 1; justify-self: start; width: 105px; }
+  .about-title-wrap { gap: 22px; }
+  .toothbrushes { width: 145px; margin-left: auto; margin-right: 7vw; }
   .event-copy { max-width: none; }
   .section-heading { flex-direction: column; align-items: start; gap: 24px; }
   .section-heading > p { max-width: 440px; }
