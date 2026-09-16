@@ -1,22 +1,24 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 330 300">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 310">
   <g stroke="#10225b" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
-    <g transform="translate(20 20) rotate(-14 74 135)">
-      <rect x="56" y="65" width="38" height="205" rx="19" fill="#f04438"/>
-      <rect x="42" y="14" width="66" height="72" rx="20" fill="#f6f8ff"/>
-      <path d="M56 18v35m17-36v36m17-35v35" fill="none" stroke="#f04438" stroke-width="8"/>
-      <circle cx="75" cy="224" r="7" fill="#f6f8ff" stroke="none"/>
+    <!-- Red toothbrush, shown from the side so the bristles are unmistakable. -->
+    <g transform="translate(25 10) rotate(-12 95 155)">
+      <path fill="#f04438" d="M78 286c-15 0-25-12-22-27L88 103c2-11 10-18 20-18h13l-4 24h-6L88 260c-1 7-4 16-10 26Z"/>
+      <rect x="91" y="24" width="49" height="78" rx="19" fill="#f04438"/>
+      <rect x="130" y="34" width="30" height="10" rx="5" fill="#f6f8ff"/>
+      <rect x="130" y="50" width="34" height="10" rx="5" fill="#f6f8ff"/>
+      <rect x="130" y="66" width="32" height="10" rx="5" fill="#f6f8ff"/>
+      <rect x="130" y="82" width="27" height="10" rx="5" fill="#f6f8ff"/>
+      <circle cx="74" cy="256" r="7" fill="#f6f8ff" stroke="none"/>
     </g>
-    <g transform="translate(113 5) rotate(4 70 145)">
-      <rect x="52" y="70" width="40" height="208" rx="20" fill="#acccff"/>
-      <rect x="38" y="18" width="68" height="75" rx="20" fill="#f6f8ff"/>
-      <path d="M52 22v37m18-38v38m18-37v37" fill="none" stroke="#10225b" stroke-width="8"/>
-      <circle cx="72" cy="231" r="7" fill="#10225b" stroke="none"/>
-    </g>
-    <g transform="translate(212 23) rotate(16 55 132)">
-      <rect x="38" y="62" width="38" height="203" rx="19" fill="#10225b"/>
-      <rect x="24" y="12" width="66" height="72" rx="20" fill="#1646eb"/>
-      <path d="M38 16v35m17-36v36m17-35v35" fill="none" stroke="#f6f8ff" stroke-width="8"/>
-      <circle cx="57" cy="218" r="7" fill="#f6f8ff" stroke="none"/>
+    <!-- Blue toothbrush mirrors the first one and crosses behind it. -->
+    <g transform="translate(168 6) rotate(13 90 155)">
+      <path fill="#1646eb" d="M104 287c15 0 25-12 22-27L94 104c-2-11-10-18-20-18H61l4 24h6l23 151c1 7 4 16 10 26Z"/>
+      <rect x="42" y="24" width="49" height="78" rx="19" fill="#1646eb"/>
+      <rect x="22" y="34" width="30" height="10" rx="5" fill="#f6f8ff"/>
+      <rect x="18" y="50" width="34" height="10" rx="5" fill="#f6f8ff"/>
+      <rect x="20" y="66" width="32" height="10" rx="5" fill="#f6f8ff"/>
+      <rect x="25" y="82" width="27" height="10" rx="5" fill="#f6f8ff"/>
+      <circle cx="108" cy="257" r="7" fill="#f6f8ff" stroke="none"/>
     </g>
   </g>
 </svg>
