@@ -88,8 +88,13 @@ h1 { font: 400 clamp(56px, 8.9vw, 150px)/.86 var(--font-display); letter-spacing
 .event-copy .eyebrow { margin-bottom: 20px; }
 .event-copy > p:last-child { font-size: 17px; line-height: 1.7; }
 .bathroom-prop { display: block; height: auto; }
-.bath-duck { width: clamp(100px, 11vw, 150px); transform: rotate(-5deg); transform-origin: bottom center; transition: transform .25s ease; }
-.bath-duck:hover { transform: rotate(2deg) translateY(-5px); }
+.bath-duck { width: clamp(100px, 11vw, 150px); }
+.prop-trigger { padding: 0; border: 0; background: none; line-height: 0; cursor: pointer; touch-action: manipulation; }
+.prop-art { width: 100%; transition: opacity .2s; pointer-events: none; }
+.prop-trigger.is-travelling .prop-art { opacity: .18; }
+.prop-flight-layer { position: fixed; inset: 0; z-index: 30; overflow: hidden; pointer-events: none; }
+.prop-flyer { position: absolute; max-width: none; will-change: transform; }
+.prop-bubble { position: absolute; border: 1.5px solid #8cccf0; border-radius: 50%; background: #dbf4ff45; box-shadow: inset 2px 2px 0 #ffffffb0; }
 .circle-link { display: grid; place-items: center; width: 84px; aspect-ratio: 1; border: 1px solid #ffffff80; border-radius: 50%; font-size: 44px; transition: background .2s; }
 .circle-link:hover { background: #ffffff25; }
 
@@ -97,8 +102,7 @@ h1 { font: 400 clamp(56px, 8.9vw, 150px)/.86 var(--font-display); letter-spacing
 .about { padding-block: 85px 100px; }
 .about-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 7vw; }
 .about-title-wrap { display: flex; flex-direction: column; align-items: flex-start; gap: 34px; }
-.toothbrushes { width: clamp(150px, 18vw, 250px); margin-left: clamp(10px, 7vw, 110px); transform: rotate(-3deg); transition: transform .25s ease; }
-.toothbrushes:hover { transform: rotate(2deg) translateY(-5px); }
+.toothbrushes { width: clamp(150px, 18vw, 250px); margin-left: clamp(10px, 7vw, 110px); }
 .about-copy { padding: 12px; background: #fffffff0; }
 .about-copy > p { font-size: 16px; line-height: 1.8; }
 .about-copy .large-copy { font-size: clamp(21px, 2vw, 30px); line-height: 1.45; margin-bottom: 24px; }

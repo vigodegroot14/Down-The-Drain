@@ -1,12 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 280">
-  <!-- Flat, classic rubber-duck silhouette. -->
-  <path fill="#ffd52b" d="M71 128c30-9 64-4 94 12 34 18 64 22 103 13 28-6 56-4 68 19 14 27 0 63-34 84-34 20-85 27-140 20-61-7-105-31-115-66-9-32 1-68 24-82Z"/>
-  <circle cx="137" cy="93" r="82" fill="#ffd52b"/>
-  <!-- Broad orange beak, low on the face like the reference. -->
-  <path fill="#ff8412" d="M66 79 21 98c-17 7-17 23 0 30l45 19c18 8 37-6 37-26v-6c0-24-18-44-37-36Z"/>
-  <path fill="none" stroke="#de5900" stroke-width="5" stroke-linecap="round" d="M22 124c23 2 47 0 75-5"/>
-  <!-- One eye and one simple molded wing are enough to read the object. -->
-  <circle cx="111" cy="82" r="18" fill="#07122b"/>
-  <circle cx="105" cy="76" r="5" fill="#f6f8ff"/>
-  <path fill="#efb500" d="M121 197c12-24 45-34 70-20 23 13 27 41 8 60-20 20-58 20-76 0-10-11-11-27-2-40Z"/>
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 280">
+  <path fill="#ffd52b" d="M84 151C65 135 58 116 60 92c3-37 31-63 65-63 38 0 66 28 66 64 0 20-8 36-22 49 35 16 83 16 112-2 15-9 25-23 33-33 5 21 4 43-5 61 16 10 23 24 20 40-5 35-56 55-124 55-79 0-137-24-141-66-2-19 5-35 20-46Z"/>
+  <path fill="#ff861d" d="M69 99c-13 6-25 11-42 13-10 1-15 6-13 13 3 12 23 18 43 16l25-5c9-2 14-8 12-15-2-11-11-19-25-22Z"/>
+  <path d="M24 125c17 4 39 3 57-1" fill="none" stroke="#d65e12" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="104" cy="87" r="9" fill="#10225b"/>
+  <path d="M141 185c29-18 60-14 90-4-10 28-39 42-66 33-13-4-21-14-24-29Z" fill="#efb921"/>
 </svg>

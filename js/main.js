@@ -2,6 +2,111 @@
   const year = document.getElementById('year');
   if (year) year.textContent = new Date().getFullYear();
 
+  // The button stays in the layout; only a non-interactive copy travels.
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  document.querySelectorAll('.bathroom-prop').forEach(art => {
+    const duck = art.classList.contains('bath-duck');
+    const home = document.createElement('button');
+    home.type = 'button';
+    home.className = `${art.className} prop-trigger`;
+    home.setAttribute('aria-label', duck ? 'Laat de eend zwemmen' : 'Laat de tandenborstels zweven');
+    art.replaceWith(home);
+    art.className = 'prop-art';
+    home.append(art);
+    let layer, flyer, frame, started, lastTime, lastBubble, returnAt;
+    let x = 0, y = 0, angle = 0, width = 0, height = 0;
+    let returning = false, touchTimer;
+    const clamp = (value, min, max) => Math.max(min, Math.min(max, value));
+    function cleanUp() {
+      cancelAnimationFrame(frame);
+      clearTimeout(touchTimer);
+      layer?.remove();
+      layer = null;
+      home.classList.remove('is-travelling');
+    }
+    function stop() {
+      if (!layer || returning) return;
+      returning = true;
+      returnAt = performance.now();
+    }
+    function bubble(now) {
+      if (!duck || now - lastBubble < 160) return;
+      lastBubble = now;
+      const dot = document.createElement('i');
+      dot.className = 'prop-bubble';
+      const size = 7 + Math.random() * 12;
+      Object.assign(dot.style, { left: `${x + width * .75}px`, top: `${y + height * .75}px`, width: `${size}px`, height: `${size}px` });
+      layer.append(dot);
+      const animation = dot.animate([
+        { transform: 'translate(0, 0) scale(.65)', opacity: .8 },
+        { transform: 'translate(24px, -65px) scale(1.2)', opacity: 0 }
+      ], { duration: 1100, easing: 'ease-out' });
+      animation.onfinish = () => dot.remove();
+    }
+    function tick(now) {
+      const rect = home.getBoundingClientRect();
+      const dt = Math.min(now - lastTime, 48);
+      lastTime = now;
+      const t = (now - started) / 1000;
+      const pad = Math.max(width, height) * .22 + 12;
+      const left = pad, right = Math.max(left, innerWidth - width - pad);
+      const top = 80 + pad, bottom = Math.max(top, innerHeight - height - pad);
+      // Start toward the opposite side, then loop with a gentle vertical wave.
+      const origin = clamp(rect.left, left, right);
+      const direction = origin > (left + right) / 2 ? -1 : 1;
+      const travel = (1 - Math.cos(t * .72)) / 2;
+      const targetX = returning ? rect.left : origin + ((direction < 0 ? left : right) - origin) * travel;
+      const targetY = returning ? rect.top : clamp(rect.top - 75 * Math.sin(t * .72) + 28 * Math.sin(t * 2.1), top, bottom);
+      const targetAngle = returning ? 0 : (duck ? -7 * Math.sin(t * 2.1) : 24 * Math.sin(t * 1.5));
+      const blend = 1 - Math.exp(-dt / (returning ? 115 : 90));
+      x += (targetX - x) * blend;
+      y += (targetY - y) * blend;
+      angle += (targetAngle - angle) * blend;
+      flyer.style.transform = `translate3d(${x}px, ${y}px, 0) rotate(${angle}deg)`;
+      if (!returning) bubble(now);
+      if (returning && (Math.hypot(rect.left - x, rect.top - y) < .6 || now - returnAt > 1200)) {
+        cleanUp();
+        return;
+      }
+      frame = requestAnimationFrame(tick);
+    }
+    function start() {
+      if (reducedMotion.matches) return;
+      if (layer) { returning = false; return; }
+      const rect = home.getBoundingClientRect();
+      width = rect.width; height = rect.height; x = rect.left; y = rect.top; angle = 0;
+      layer = document.createElement('div');
+      layer.className = 'prop-flight-layer';
+      layer.setAttribute('aria-hidden', 'true');
+      flyer = art.cloneNode();
+      flyer.className = 'prop-flyer';
+      flyer.style.width = `${width}px`;
+      flyer.style.height = `${height}px`;
+      flyer.style.transform = `translate3d(${x}px, ${y}px, 0)`;
+      layer.append(flyer);
+      document.body.append(layer);
+      home.classList.add('is-travelling');
+      returning = false;
+      started = lastTime = lastBubble = performance.now();
+      frame = requestAnimationFrame(tick);
+    }
+    home.addEventListener('pointerenter', event => { if (event.pointerType === 'mouse') start(); });
+    home.addEventListener('pointerleave', stop);
+    home.addEventListener('focus', () => { if (home.matches(':focus-visible')) start(); });
+    home.addEventListener('blur', stop);
+    home.addEventListener('click', () => {
+      start();
+      clearTimeout(touchTimer);
+      touchTimer = setTimeout(stop, 8500);
+    });
+    home.addEventListener('keydown', event => { if (event.key === 'Escape') stop(); });
+    window.addEventListener('scroll', stop, { passive: true });
+    window.addEventListener('resize', cleanUp);
+    window.addEventListener('blur', cleanUp);
+    document.addEventListener('visibilitychange', () => { if (document.hidden) cleanUp(); });
+    reducedMotion.addEventListener('change', cleanUp);
+  });
+
   // Optional aftermovie: add the video element documented in README when ready.
   const video = document.querySelector('video.hero-media');
   if (video) {
