@@ -86,7 +86,9 @@ h1 { font: 400 clamp(56px, 8.9vw, 150px)/.86 var(--font-display); letter-spacing
 .event-row h2 { font-size: clamp(52px, 7vw, 100px); }
 .event-copy { max-width: 420px; }
 .event-copy .eyebrow { margin-bottom: 20px; }
-.event-copy > p:last-child { font-size: 17px; line-height: 1.7; }
+.event-copy > p:not(.eyebrow) { font-size: 17px; line-height: 1.7; }
+.concept-link { margin-top: 24px; }
+.events .concept-link:hover { background: var(--paper); color: var(--blue); }
 .bathroom-prop { display: block; height: auto; }
 .bath-duck { width: clamp(100px, 11vw, 150px); }
 .prop-trigger { padding: 0; border: 0; background: none; line-height: 0; cursor: pointer; touch-action: manipulation; }
