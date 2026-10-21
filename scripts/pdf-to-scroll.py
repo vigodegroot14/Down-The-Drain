@@ -70,7 +70,8 @@ document = '''<!doctype html>
     #pagina-12 { position: relative; }
     .home-logo { position: absolute; left: 40%; top: 34%; width: 20%;
       display: block; border-radius: 50%; }
-    .home-logo img { border-radius: 50%; animation: home-logo-spin 16.36s linear infinite; }
+    .home-logo img { aspect-ratio: 1; object-fit: cover; border-radius: 50%;
+      clip-path: circle(46% at 50% 50%); animation: home-logo-spin 16.36s linear infinite; }
     @keyframes home-logo-spin { to { transform: rotate(360deg); } }
     .top { position: fixed; right: 16px; bottom: 16px; z-index: 2;
       padding: 12px 16px; border: 1px solid #ffffff80; border-radius: 30px;

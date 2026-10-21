@@ -57,7 +57,7 @@ h2 { font: 400 clamp(48px, 7.3vw, 110px)/.84 var(--font-display); letter-spacing
 .drain-logo-button { border: 0; padding: 0; background: transparent; width: min(65vh, 76vw, 560px); aspect-ratio: 1; border-radius: 50%; }
 .drain-logo-button:focus-visible { outline: none; }
 .drain-intro:has(.drain-logo-button:focus-visible) .intro-bottom > p { text-decoration: underline; text-underline-offset: 6px; }
-.drain-logo-spinner { width: 100%; border-radius: 50%; }
+.drain-logo-spinner { width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 50%; clip-path: circle(46% at 50% 50%); }
 .intro-bottom { position: relative; text-align: center; letter-spacing: .12em; }
 .intro-bottom p { margin-bottom: 10px; }
 .intro-bottom p span { display: inline-block; margin-left: 10px; }
